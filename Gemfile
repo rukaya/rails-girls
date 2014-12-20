@@ -7,7 +7,10 @@ gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development , :test]
-gem 'pg' , group: [:production]
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 # i used bundle after adding this gem
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
